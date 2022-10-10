@@ -1,0 +1,38 @@
+.skills {
+	.col-md-6 {
+		padding-block: 0 !important;
+	}
+	.progress-container {
+		position: relative;
+		transition: all 0.5s ease-in-out;
+
+		.progress-badge {
+			margin-bottom: 0.875rem;
+			font-size: 0.9375rem;
+			text-transform: uppercase;
+		}
+
+		.progress {
+			background: rgba(55, 140, 63, 0.4) !important;
+			height: 6px !important;
+			margin-bottom: 0.875rem;
+
+			&-bar {
+				transition: transform 2s ease-in-out;
+				transform: scaleX(0);
+				transition-duration: 2s;
+				transform-origin: 0% 0%;
+
+				&.go {
+					transform: scaleX(1);
+				}
+			}
+
+			&-value {
+				position: absolute;
+				top: 2px;
+				right: 0;
+			}
+		}
+	}
+}

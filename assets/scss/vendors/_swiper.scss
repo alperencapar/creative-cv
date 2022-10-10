@@ -1,0 +1,37 @@
+@import "../../../node_modules/swiper/swiper.scss";
+
+:root {
+    --swiper-pagination-bullet-horizontal-gap: 3px;
+    --swiper-pagination-bullet-width: 30px;
+    --swiper-pagination-bullet-height: 3px;
+    --swiper-pagination-bullet-inactive-color: #a5a3a3;
+    --swiper-pagination-color: #378c3f;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+
+  }
+
+
+.swiper {
+	&-wrapper {
+	}
+
+	&-slide {
+	}
+
+}
+
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 2rem !important;
+
+    .swiper-pagination-bullet {
+
+        border-radius: unset !important;
+
+        &-active {
+            // background-color: $bullet-bg-active;
+        }
+    }
+}

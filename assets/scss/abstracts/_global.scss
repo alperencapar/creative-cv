@@ -1,0 +1,49 @@
+body {
+	// color: $dark;
+	color: #2c2c2c;
+}
+
+section {
+	padding-bottom: 70px;
+
+	> h4 {
+		font-weight: 700;
+		text-align: center;
+	}
+}
+
+.btn {
+	&-primary {
+		&:hover {
+			background-color: #40a249 !important;
+		}
+	}
+}
+
+.subheading {
+	color: #9a9a9a;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.degree,
+.company {
+	@include media-breakpoint-up(md) {
+		text-align: center;
+	}
+}
+
+h5,
+.subheading {
+	@include media-breakpoint-down(md) {
+		text-align: center;
+	}
+}
+
+.py-6 {
+	padding-block: 4.375rem;
+}
+
+.pb-6 {
+	padding-bottom: 4.375rem;
+}

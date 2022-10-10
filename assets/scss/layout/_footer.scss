@@ -1,0 +1,47 @@
+footer {
+	padding: 24px 0;
+	.icons {
+		.btn {
+			i {
+				color: #888;
+				font-size: 1.5em;
+			}
+
+			.fa-linkedin {
+				&:hover {
+					color: #0072b1;
+				}
+			}
+
+			.fa-github {
+				&:hover {
+					color: #333;
+				}
+			}
+
+			.fa-twitter {
+				&:hover {
+					color: #1da1f2;
+				}
+			}
+
+			.fa-spotify {
+				&:hover {
+					color: #1db954;
+				}
+			}
+		}
+	}
+
+	h4 {
+		margin-top: 30px !important;
+		margin-bottom: 15px;
+		font-weight: 700;
+		line-height: 1.45em;
+		font-size: 24px;
+	}
+
+	p {
+		font-size: 0.875rem;
+	}
+}

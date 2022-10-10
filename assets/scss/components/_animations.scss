@@ -1,0 +1,64 @@
+// $transition_delay: 0.6;
+
+@media (prefers-reduced-motion: no-preference) {
+	.animate {
+		opacity: 0;
+		filter: blur(1px);
+		transition: all 0.7s ease-in-out;
+
+		&.left {
+			transform: translateX(-60%);
+		}
+
+		&.right {
+			transform: translateX(60%);
+		}
+
+		&.top {
+			transform: translateY(-60%);
+		}
+
+		&.bottom {
+			transform: translateY(60%);
+		}
+
+		&.zoom-in {
+			transform: scale(0.6);
+		}
+
+		&.show {
+			opacity: 1;
+			filter: blur(0);
+			transform: translateX(0);
+
+			&.zoom-in {
+				transform: scale(1);
+			}
+
+			.progress-bar {
+				transform: scaleX(1);
+			}
+		}
+
+		.progress-bar {
+			transition: all 2s ease-in-out !important;
+			transform-origin: 0% 0%;
+			transform: scaleX(0);
+		}
+	}
+}
+
+//for progress bar animation
+.animate {
+	&.show {
+		.progress-bar {
+			transform: scaleX(1);
+		}
+	}
+
+	.progress-bar {
+		transition: all 2s ease-in-out !important;
+		transform-origin: 0% 0%;
+		transform: scaleX(0);
+	}
+}

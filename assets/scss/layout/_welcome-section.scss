@@ -1,0 +1,147 @@
+.section-welcome {
+	max-width: 100%;
+	// max-height: 60vh;
+	height: 100%;
+	position: relative;
+	padding-block: 0 !important;
+
+	&-bg {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		height: 60vh;
+		max-height: 440px;
+		min-height: 550px;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		&::before {
+			// background: rgb(2, 0, 36);
+			// background: linear-gradient(
+			// 	360deg,
+			// 	rgba(2, 0, 36, 0) 0%,
+			// 	rgba(174, 8, 176, 0.3981967787114846) 54%
+			// );
+
+			background: rgba(44, 44, 44, 0.2);
+			background: linear-gradient(
+				0deg,
+				rgba(44, 44, 44, 0.2),
+				rgba(55, 140, 63, 0.6)
+			);
+			z-index: 9;
+		}
+
+		&::after {
+			background-color: #000;
+			opacity: 0.5;
+			z-index: 10;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			max-width: 100%;
+			background-size: cover;
+			background-position: center center;
+			object-fit: cover;
+		}
+	}
+
+	&-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 999;
+
+		.wrapper {
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			.container {
+				// top: 50%;
+				// left: 50%;
+				// width: 100%;
+				// transform: translate(-50%, -50%);
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+		}
+
+		.person-img {
+			img {
+				border-radius: 100%;
+				width: 180px;
+				height: 180px;
+				border: 15px solid transparent;
+				cursor: pointer;
+				transition: transform 0.4s ease-in-out;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		.author-info {
+			max-width: 500px;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			row-gap: 2px;
+			text-align: center;
+			margin-top: 1rem;
+
+			.person-roles,
+			.person-name {
+				font-family: "Montserrat", sans-serif;
+			}
+
+			.person-name {
+				color: rgb(235, 235, 235);
+				font-weight: 700 !important;
+				// letter-spacing: 0.7px;
+				font-size: 2rem;
+			}
+
+			.person-roles {
+				color: #fff;
+				// font-weight: 900;
+				letter-spacing: 1px;
+				font-size: 1.3rem;
+			}
+
+			.cta {
+				margin-top: 0.75rem;
+				&-btns {
+					display: flex;
+					justify-content: center;
+					gap: 1rem;
+
+					a {
+						font-size: 0.75rem;
+						border-radius: 4px;
+						// width: 140px;
+						padding-block: 0.5rem;
+						max-width: 140px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

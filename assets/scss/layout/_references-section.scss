@@ -1,0 +1,42 @@
+.references {
+	.card {
+		&-body {
+			padding: 2.5rem;
+
+			.row {
+				> div {
+					padding-inline: 15px;
+					padding-block: 0;
+				}
+			}
+		}
+	}
+	.person {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		&-img {
+			img {
+				height: 120px;
+				width: auto;
+			}
+		}
+
+		&-name {
+			margin-top: 12px;
+
+			h5 {
+				line-height: 1;
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.col-lg-10.col-md-9 {
+		@include media-breakpoint-down(md) {
+			padding-top: 0;
+		}
+	}
+}
