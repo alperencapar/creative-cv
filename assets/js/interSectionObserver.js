@@ -3,8 +3,6 @@ let observer_options = {
 	threshold: 0.1
 };
 
-console.log(window.innerWidth);
-
 if (window.innerWidth < 576) {
 	observer_options.rootMargin = "120px";
 	observer_options.threshold = 0.001;
@@ -35,8 +33,6 @@ if (window.innerWidth < 576) {
 // 	observer_options.rootMargin = "50px";
 // 	observer_options.threshold = 0.25;
 // }
-
-console.log(observer_options.threshold, observer_options.rootMargin);
 
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((entry) => {

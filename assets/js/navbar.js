@@ -50,10 +50,11 @@ if (navbar.dataset.autoSnapBg == "true") {
 
 // ! NAVBAR BG + SCROLL SNAP END
 
-// ! (MOBILE) NAVBAR CONTAINER TRANSLATE-LEFT START
+// ! (MOBILE) NAVBAR CONTAINER TRANSLATE-LEFT START + CLICK CLOSE ON MOBILE
 
 const mobile_nav_btn = document.querySelector(".navbar-toggler");
-const nav_links = document.querySelector(".navlinks ");
+const navlinks_container = document.querySelector(".navlinks");
+const navlinks = document.querySelectorAll(".navlinks a");
 
 let open;
 let translate_left_px = "300px";
@@ -69,13 +70,26 @@ mobile_nav_btn.addEventListener("click", () => {
 
 		if (document.body.clientWidth <= 576) {
 			// translate_left_px = parseFloat((document.body.clientWidth / 1.5))
-			translate_left_px = window.getComputedStyle(nav_links).width;
-			// translate_left_px = "250px"
-			console.log(translate_left_px);
+			translate_left_px = window.getComputedStyle(navlinks_container).width;
 		}
 		navbar.style.transform = `translate3d(-${translate_left_px}, 0, 0)`;
-		nav_links.style.transform = `translate3d(${translate_left_px}, 0, 0)`;
+		navlinks_container.style.transform = `translate3d(${translate_left_px}, 0, 0)`;
 	}
 });
+
+
+navlinks.forEach((element) => {
+	element.addEventListener("click", () => {
+		if (open) {
+			open = !open;
+			const navbar_collapse = document.querySelector(".navbar-collapse")
+			navbar_collapse.classList.remove("show")
+			navbar.style.transform = "translate3d(0, 0, 0)";
+			mobile_nav_btn.classList.remove("animate-show");
+			navlinks_container.style.transform = `translate3d(${translate_left_px}, 0, 0)`;
+		} 
+	});
+});
+
 
 // ! (MOBILE) NAVBAR CONTAINER TRANSLATE-LEFT END
