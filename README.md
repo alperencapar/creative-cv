@@ -3,7 +3,7 @@
 Creative CV is a HTML resume template for professionals.
 
 This modern and responsive design template is built with
-*HTML
+* HTML
 * [SCSS](https://github.com/alperencapar/alperencapar.github.io/tree/master/assets/scss)
 * [JavaScript](https://github.com/alperencapar/alperencapar.github.io/tree/master/assets/js)
 * Bootstrap 5
