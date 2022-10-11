@@ -42,6 +42,11 @@ function calculate_scroll_height_of_body() {
 	}
 }
 
+function calculate_age_by_year(current_year, birth_year) {
+	let age = current_year - birth_year;
+	return age;
+}
+
 //FUNCTIONS END
 
 // export {
