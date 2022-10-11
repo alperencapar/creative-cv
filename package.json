@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "parcel *.html --no-cache"
+		"dev": "parcel *.html --no-cache",
+		"build-sass": "sass --watch assets/scss/main.scss assets/css/styles.css"
 	},
 	"author": "",
 	"license": "ISC",
