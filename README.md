@@ -20,6 +20,6 @@ For non compiled version [click](https://github.com/alperencapar/alperencapar.gi
 
 ## Live Preview
 
-You can preview site live from [here](https://alperencapar.github.io/)
+You can preview site live from [here](https://alperencapar.github.io/creative-cv/)
 
-<https://alperencapar.github.io/>
+<https://alperencapar.github.io/creative-cv/>
